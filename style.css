@@ -14,7 +14,7 @@
 .box{
     /* position: absolute; */
     bottom: 0px;
-    right: 10px;
+    right: 10px; 
     border: 2px solid;
     /* height: 100px; */
     /* width: 100px; */
@@ -25,7 +25,7 @@
 } */
 
 .parent-box .box img{
-    position: fixed;
+    position: fixed; 
     right: 20px;
     bottom: 30px;
     height: 80px;
