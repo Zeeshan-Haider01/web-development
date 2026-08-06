@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <p class="box">Lorem ipsum dolor sit.</p>
+    <p id="para">Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p class="parathree">Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit.</p> -->
+
+    <!-- <p class="item">Apple</p>
+    <p class="item">Mango</p> -->
+
+    <!-- <p>HTML</p>
+    <p>CSS</p>
+    <p>JS</p> -->
+
+    <!-- <p class="demo">Hello</p> -->
+
+    <!-- <p class="fruit">Apple</p>
+    <p class="fruit">Banana</p> -->
+
+    <!-- <div id="box"></div> -->
+
+    <!-- <p id="name"></p> -->
+
+    <!-- <p id="city"></p> -->
+
+    <!-- <p id="text">Hello</p> -->
+
+    <!-- <img id="img">
+    document.getElementById("img").setAttribute("src", "cat.jpg");
+
+    <a id="link" href="https://google.com">Google</a>
+    let url = document.getElementById("link").getAttribute("href");
+    console.log(url)
+
+    <input id="box" disabled>
+    document.getElementById("box").removeAttribute("disabled"); -->
+
+    <!-- <p class="msg">Hello</p> -->
+    <!-- <p id="msg" class>test</p>
+    document.getElementById("msg").classList.add("red");
+    document.getElementById("msg").classList.remove("red");
+    <ul id="menu" class="mobile">    { .mobile{disple:"none"} }
+        <li><a href="">Home</a></li> { .mobile.active{disple:"block"} }
+        <li><a href="">Home</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">Home</a></li>
+    </ul>
+     <button onclick="toggleMenu()">menu</button>
+     function toggleMenu() {
+        document.getElementById("menu").classList.toggle("active");
+    }    -->
+
+
+    <!-- <button onclick="toggle()">hide/show</button>
+    <nav id="list" class="listmenu">
+        <ul >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </nav> -->
+
+
+
+
+
+    <!-- <ul id="list"></ul> -->
+    <!-- <p id="text">Hello</p> -->
+
+     <!-- <button onclick="hello()">Click</button> -->
+
+      <!-- <button id="btn">Click</button> -->
+      
+      <!-- input event  -->
+      <!-- <input id="name"> -->
+
+      <!-- <form id="form">
+        <button>Submit</button>
+    </form> -->
+
+    <!-- <input id="age" value="20"> -->
+
+    <!-- <input type="checkbox" id="check" checked> -->
+
+     <!-- <button id="btn" disabled>Save</button> -->
+
+    <!-- <img id="pic"> -->
+     
+    <!-- <a id="site">Visit</a> -->
+
+
+            <!-- <input type="text" id="name">
+            <button onclick="greet()">Greet</button>
+            <h2 id="message"></h2>
+            <script>
+                // function greet() {
+                //         let name = document.getElementById("name").value;
+                //         if(name == ""){
+                //             document.getElementById("message").innerHTML = "Please Enter Name";
+                //         }else{
+                //             document.getElementById("message").innerHTML = "Welcome " + name;
+                //         }
+                // }
+            </script> -->
+
+        <!-- simple crud -->
+
+    <!-- <input type="text" id="student">
+    <button onclick="addTask()"> Add </button>
+    <ul id="list"></ul> -->
+    <script>
+        // let students = [];
+        // function addTask(){
+        //     let student = document.getElementById("student").value;
+        //     students.push(student);
+        //     document.getElementById("student").value = "";
+        //     showTasks();
+        // }
+        // function showTasks(){
+        //     let list = document.getElementById("list");
+        //     list.innerHTML = "";
+        //     for(let i = 0; i < students.length; i++){
+        //         list.innerHTML += "<li>" + students[i] + "</li>";
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // after first
+
+// let tasks = [];
+
+// function addTask(){
+//     let task = document.getElementById("task").value;
+//     tasks.push(task);
+//     document.getElementById("task").value = "";
+//     showTasks();
+// }
+
+// function showTasks(){
+//     let list = document.getElementById("list");
+//     list.innerHTML = "";
+//     for(let i = 0; i < tasks.length; i++){
+//         list.innerHTML += `
+//         <li>
+//             ${tasks[i]}
+//             <button onclick="deleteTask(${i})">
+//                 Delete
+//             </button>
+//         </li>
+//         `;
+//     }
+
+// }
+
+// function deleteTask(index){
+//     tasks.splice(index,1);
+//     showTasks();
+// }
+    </script> 
+
+
+    <!-- <input type="text" id="student">
+    <button onclick="add()" id="">Add</button>
+    <ul id="list"></ul>
+    <script>
+        let students = [];
+        function add(){
+           let student = document.getElementById("student").value;
+           students.push(student);
+           console.log(students);
+           document.getElementById("student").value = "";
+           show()
+        }
+        function show(){
+            let list = document.getElementById("list");
+            list.innerHTML = "";
+            for (let i = 0; i < students.length; i++) {
+                list.innerHTML += "<li>" + students[i] + "</li>"
+            }
+            // console.log(list)
+        } 
+    </script> -->
+
+
+    <!-- Part 1: Select Element & Read Input -->
+
+    <!-- 
+        Concepts
+        getElementById()
+        value 
+    -->
+
+    <!-- <input type="text" id="name">
+    <button onclick="showName()">Show</button>
+    <script>
+    function showName() {
+        let input = document.getElementById("name");
+        console.log(input.value);
+    }
+    </script> -->
+
+    <!-- Part 2: Change HTML -->
+    <!-- Concepts
+    innerHTML -->
+
+    <!-- <input type="text" id="name">
+    <button onclick="showName()">Show</button>
+
+    <p id="result"></p>
+
+    <script>
+    function showName() {
+        let input = document.getElementById("name");
+        document.getElementById("result").innerHTML = input.value;
+    }
+    </script> -->
+
+    <!-- Part 3: Store Data in an Array
+    Concepts
+    Array
+    push() -->
+
+    <!-- <input type="text" id="name">
+    <button onclick="addStudent()">Add</button>
+
+    <script>
+        let students = [];
+        function addStudent() {
+            let name = document.getElementById("name").value;
+            students.push(name);
+            console.log(students);
+        }
+    </script> -->
+
+    <!-- Part 4: Display Array Using Loop
+    Concepts
+    for loop
+    innerHTML -->
+
+    <!-- <input type="text" id="name">
+    <button onclick="addStudent()">Add</button>
+    <ul id="list"></ul>
+
+    <script>
+    let students = [];
+    function addStudent() {
+        let name = document.getElementById("name").value;
+        students.push(name);
+        let list = document.getElementById("list");
+        list.innerHTML = "";
+        for(let i = 0; i < students.length; i++) {
+            list.innerHTML += "<li>" + students[i] + "</li>";
+        }
+    }
+    </script> -->
+
+    <!-- Part 5: Clear Input
+    Concept -->
+    <!-- Change value -->
+
+    <!-- document.getElementById("name").value = ""; -->
+
+        <!-- Part 6: Delete Student -->
+    <!-- Concepts
+        splice()
+        onclick -->
+
+        <!-- 
+        <Script>
+            list.innerHTML += `
+                <li>
+                    ${students[i]}
+                    <button onclick="deleteStudent(${i})">Delete</button>
+                </li>
+                `;
+
+    function deleteStudent(index){
+        students.splice(index,1);
+        showStudents();
+    } 
+
+    function showStudents(){
+    let list = document.getElementById("list");
+    list.innerHTML = "";
+    for(let i=0;i<students.length;i++){
+        list.innerHTML += `
+        <li>
+            ${students[i]}
+            <button onclick="deleteStudent(${i})">Delete</button>
+        </li>`;
+        }
+    }
+
+    Part 7: Edit Student
+    Concept
+
+    prompt()
+    list.innerHTML += `
+    <li>
+        ${students[i]}
+        <button onclick="editStudent(${i})">Edit</button>
+        <button onclick="deleteStudent(${i})">Delete</button>
+    </li>
+    `;
+
+    function editStudent(index){
+        let newName = prompt("Enter New Name");
+        students[index] = newName;
+        showStudents();
+    }
+    </Script>
+     -->
+
+    <!-- project -->
+     <!-- <h2>Student CRUD</h2>
+
+    <input type="text" id="studentName" placeholder="Enter Name">
+    <button onclick="addStudent()">Add</button>
+
+    <ul id="list"></ul> -->
+
+
+    <!-- Slider -->
+        <!-- <div class="slider">
+            <img id="sliderImage" src="images/imagea.jpg" alt="Image">
+            <h1>image 1</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="buttons">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div> -->
+        <!-- <button>Explore Courses</button> -->
+    <!-- banner slider -->
+
+    <div class="slider">
+        <img id="sliderImage" src="images/imagea.jpg" alt="">
+        <div class="content">
+            <h1 id="title">Image 1</h1>
+            <p id="description">This is the first slide description. </p>
+        </div>
+        <button id="prev" class="arrow left">&#10094;</button>
+        <button id="next" class="arrow right">&#10095;</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
