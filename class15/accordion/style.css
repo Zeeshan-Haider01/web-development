@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+
+.accordion {
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.item {
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.question {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.question span {
+    font-size: 24px;
+}
+
+.answer {
+    display: none;
+    padding: 0 20px 20px;
+    margin: 0;
+    color: #555;
+}

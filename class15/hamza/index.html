@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shopping cart</h1>
+    <div class="wrapper">
+        <div class="products">
+            <div class="product">
+                <h2>laptop</h2>
+                <p>Price: $1000</p>
+                <button onclick="addtocart('laptop', 1000)">Add to cart</button>
+            </div>
+            <div class="product">
+                <h2>mouse</h2>
+                <p>Price: $100</p>
+                <button onclick="addtocart('mouse', 100)">Add to cart</button>
+            </div>
+            <div class="product">
+                <h2>speaker</h2>
+                <p>Price: $500</p>
+                <button onclick="addtocart('speaker', 500)">Add to cart</button>
+            </div>
+        </div>
+
+        <div id="cart">
+
+            
+        </div>
+        <h3>Total Price: $<span id="total">0</span></h3>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

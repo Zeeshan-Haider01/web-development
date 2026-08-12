@@ -218,53 +218,119 @@ document.getElementById("site").href = "https://google.com"; */
 // banner slider
 
 
-    let slides = [
-        {
-            image: "images/imagea.jpg",
-            title: "Image 1",
-            description: "This is the 1st slide description."
-        },
-        {
-            image: "images/imageb.jpg",
-            title: "Image 2",
-            description: "This is the 2nd slide description."
-        },
-        {
-            image: "images/imagec.jpg",
-            title: "Image 3",
-            description: "This is the 3rd slide description."
-        },
-        {
-            image: "images/imaged.jpg",
-            title: "Image 4",
-            description: "This is the 4th slide description."
-        }
-    ];
+    // let slides = [
+    //     {
+    //         image: "images/imagea.jpg",
+    //         title: "Image 1",
+    //         description: "This is the 1st slide description."
+    //     },
+    //     {
+    //         image: "images/imageb.jpg",
+    //         title: "Image 2",
+    //         description: "This is the 2nd slide description."
+    //     },
+    //     {
+    //         image: "images/imagec.jpg",
+    //         title: "Image 3",
+    //         description: "This is the 3rd slide description."
+    //     },
+    //     {
+    //         image: "images/imaged.jpg",
+    //         title: "Image 4",
+    //         description: "This is the 4th slide description."
+    //     }
+    // ];
 
-    let current = 0;
-    const image = document.getElementById("sliderImage");
-    const title = document.getElementById("title");
-    const description = document.getElementById("description");
+    // let current = 0;
+    // const image = document.getElementById("sliderImage");
+    // const title = document.getElementById("title");
+    // const description = document.getElementById("description");
     
-    function showSlide() {
-        image.src = slides[current].image;
-        title.innerText = slides[current].title;
-        description.innerText = slides[current].description;
-    }
-    document.getElementById("next").addEventListener("click", function () {
-        current++;
-        if (current >= slides.length) {
-            current = 0;
-        }
-        showSlide();
-    });
+    // function showSlide() {
+    //     image.src = slides[current].image;
+    //     title.innerText = slides[current].title;
+    //     description.innerText = slides[current].description;
+    // }
+    // document.getElementById("next").addEventListener("click", function () {
+    //     current++;
+    //     if (current >= slides.length) {
+    //         current = 0;
+    //     }
+    //     showSlide();
+    // });
 
-    document.getElementById("prev").addEventListener("click", function () {
-        current--;
-        if (current < 0) {
-            current = slides.length - 1;
-        }
-        showSlide();
-    });
+    // document.getElementById("prev").addEventListener("click", function () {
+    //     current--;
+    //     if (current < 0) {
+    //         current = slides.length - 1;
+    //     }
+    //     showSlide();
+    // });
 
     // showSlide();
+
+
+
+    let slideData = [
+        {
+            image: "https://static.vecteezy.com/system/resources/thumbnails/054/876/032/small/mirror-image-snow-capped-mountain-peaks-reflected-in-pristine-lake-free-photo.jpg",
+            heading: "heading 1",
+            para: "para 1"
+        },
+        {
+            image: "https://cdn.pixabay.com/photo/2016/11/21/06/53/beautiful-natural-image-1844362_1280.jpg",
+            heading: "heading 2",
+            para: "para 2"
+        },
+        {
+            image: "https://static.vecteezy.com/system/resources/thumbnails/060/843/811/small/close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration-free-photo.jpg",
+            heading: "heading 3",
+            para: "para 3"
+        },
+        {
+            image: "https://cdn.pixabay.com/photo/2022/10/22/17/00/gull-7539615_1280.jpg",
+            heading: "heading 4",
+            para: "para 4"
+        },
+    ]
+
+let image = document.getElementById("img")
+let title = document.getElementById("title")
+let desc = document.getElementById("desc")
+let index = 0;
+
+function showData (){
+    image.src = slideData[index].image;
+    title.innerText = slideData[index].heading;
+    desc.innerText = slideData[index].para;
+}
+
+document.getElementById("nextbtn").addEventListener("click" , function (){
+    index++;
+    if(index >= slideData.length){
+        index = 0;
+    }
+    showData()
+})
+
+document.getElementById("prevbtn").addEventListener("click" , function (){
+    index--;
+    if(index < 0){
+        index = slideData.length - 1;
+    }
+    showData()
+})
+
+
+
+// 1st option
+document.getElementById("nextbtn").addEventListener("click" , function (){
+
+}) 
+
+// 2nd option
+function next(){
+    
+}
+let nextBtn = document.getElementById("nextbtn") 
+nextBtn.addEventListener("click" , next) 
