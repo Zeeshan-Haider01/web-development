@@ -4,7 +4,6 @@ let city = document.querySelector("#city");
 let temperature = document.querySelector("#temperature");
 let condition = document.querySelector("#condition");
 
-
 searchBtn.addEventListener("click", function () {
     let cityName = cityInput.value;
     if (cityName === "") {
@@ -17,7 +16,6 @@ searchBtn.addEventListener("click", function () {
 
 function getWeather(cityName) {
     let apiKey = "6d0910fe57f505e2331f3e1a2f0dc6ba";
-    // Step 1: Get city coordinates
     let locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
     fetch(locationUrl)
@@ -31,11 +29,9 @@ function getWeather(cityName) {
                 return;
             }
 
-            // Get latitude and longitude
             let latitude = locationData[0].lat;
             let longitude = locationData[0].lon;
 
-            // Step 2: Get weather
             let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
             return fetch(weatherUrl);
 
@@ -44,10 +40,10 @@ function getWeather(cityName) {
             return response.json();
         })
         .then(function (weatherData) {
-            console.log(weatherData);
+            console.log(weatherData , "weather");
             city.innerText = cityInput.value;
-            temperature.innerText = weatherData.data[0].temp + "°C";
-            condition.innerText = weatherData.data[0].weather[0].description;
+            temperature.innerText = weatherData.main.temp + "°C";
+            condition.innerText = weatherData.weather[0].description;
         })
         .catch(function (error) {
             console.log(error);

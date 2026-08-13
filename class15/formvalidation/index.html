@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Student Registration</h1>
+
+        <form id="studentForm">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName">
+
+                <div class="error-message" id="fullNameError">
+                    Full name is required.
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+
+                <div class="error-message" id="emailError">
+                    Please enter a valid email.
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone">
+
+                <div class="error-message" id="phoneError">
+                    Please enter a valid phone number.
+                </div>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+
+                <div class="error-message" id="dobError">
+                    Date of birth is required.
+                </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <div class="gender-options">
+
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                    </label>
+
+                </div>
+
+                <div class="error-message" id="genderError">
+                    Please select your gender.
+                </div>
+
+            </div>
+
+            <!-- Course -->
+            <div class="form-group">
+
+                <label for="course">Course</label>
+
+                <select id="course">
+                    <option value="">Select Course</option>
+                    <option value="computer-science">
+                        Computer Science
+                    </option>
+                    <option value="business">
+                        Business Administration
+                    </option>
+                    <option value="engineering">
+                        Engineering
+                    </option>
+                    <option value="medicine">
+                        Medicine
+                    </option>
+                </select>
+
+                <div class="error-message" id="courseError">
+                    Please select a course.
+                </div>
+
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" rows="3"></textarea>
+
+                <div class="error-message" id="addressError">
+                    Address is required.
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+
+                <div class="error-message" id="passwordError">
+                    Password must be at least 8 characters.
+                </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword">
+
+                <div class="error-message" id="confirmPasswordError">
+                    Passwords do not match.
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"> Register Student </button>
+
+            <!-- Success Message -->
+            <div class="success" id="successMessage"></div>
+
+        </form>
+        <div id="studentList"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
