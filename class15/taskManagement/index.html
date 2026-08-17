@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kanban Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Task Manager</h1>
+                <p>Manage your tasks efficiently</p>
+            </div>
+
+            <button id="addTaskBtn" class="btn primary">
+                + Add Task
+            </button>
+
+        </header>
+
+
+        <!-- Controls -->
+        <section class="controls">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
+            </div>
+
+            <select id="priorityFilter">
+
+                <option value="all">
+                    All Priorities
+                </option>
+
+                <option value="high">
+                    High
+                </option>
+
+                <option value="medium">
+                    Medium
+                </option>
+
+                <option value="low">
+                    Low
+                </option>
+
+            </select>
+
+
+            <select id="sortSelect">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="priority">
+                    Priority
+                </option>
+
+                <option value="date">
+                    Due Date
+                </option>
+
+                <option value="title">
+                    Title
+                </option>
+
+            </select>
+
+            <button id="clearAllBtn" class="btn danger">
+                Clear All
+            </button>
+
+        </section>
+
+
+        <!-- Board -->
+        <main class="board">
+
+
+            <!-- TODO -->
+            <section
+                class="column"
+                data-status="todo"
+            >
+
+                <div class="column-header">
+
+                    <h2>
+                        Todo
+                        <span id="todoCount">0</span>
+                    </h2>
+
+                </div>
+
+                <div
+                    class="task-list"
+                    id="todoTasks"
+                ></div>
+
+            </section>
+
+
+            <!-- IN PROGRESS -->
+            <section
+                class="column"
+                data-status="progress"
+            >
+
+                <div class="column-header">
+
+                    <h2>
+                        In Progress
+                        <span id="progressCount">0</span>
+                    </h2>
+
+                </div>
+
+                <div
+                    class="task-list"
+                    id="progressTasks"
+                ></div>
+
+            </section>
+
+
+            <!-- COMPLETED -->
+            <section
+                class="column"
+                data-status="completed"
+            >
+
+                <div class="column-header">
+
+                    <h2>
+                        Completed
+                        <span id="completedCount">0</span>
+                    </h2>
+
+                </div>
+
+                <div
+                    class="task-list"
+                    id="completedTasks"
+                ></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Modal -->
+
+    <div class="modal" id="taskModal" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"> Add Task </h2>
+                <button id="closeModal" class="close-btn" > × </button>
+            </div>
+
+
+            <form id="taskForm">
+                <input
+                    type="hidden"
+                    id="taskId"
+                >
+
+                <label>
+                    Task Title
+                </label>
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Enter task title"
+                    required
+                >
+
+                <label>
+                    Description
+                </label>
+                <textarea
+                    id="taskDescription"
+                    placeholder="Enter description"
+                    rows="4"
+                ></textarea>
+
+                <label>
+                    Priority
+                </label>
+                <select id="taskPriority">
+
+                    <option value="low">
+                        Low
+                    </option>
+                    <option value="medium" selected>
+                        Medium
+                    </option>
+                    <option value="high">
+                        High
+                    </option>
+                </select>
+
+
+                <label>
+                    Due Date
+                </label>
+
+                <input
+                    type="date"
+                    id="taskDueDate"
+                >
+
+                <label>
+                    Status
+                </label>
+                <select id="taskStatus">
+                    <option value="todo">
+                        Todo
+                    </option>
+                    <option value="progress">
+                        In Progress
+                    </option>
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+                <button
+                    type="submit"
+                    class="btn primary full"
+                >
+                    Save Task
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER -->
+        <header class="header">
+            <div>
+                <h1>Expense Tracker</h1>
+                <p> Manage your income and expenses </p>
+            </div>
+            <button id="addTransactionBtn" class="btn primary"> + Add Transaction </button>
+        </header>
+
+        <!-- SUMMARY -->
+        <section class="summary">
+            <div class="summary-card">
+                <p>Total Balance</p>
+                <h2 id="balance"> $0 </h2>
+            </div>
+
+            <div class="summary-card income">
+                <p>Total Income</p>
+                <h2 id="totalIncome"> $0 </h2>
+            </div>
+
+            <div class="summary-card expense">
+                <p>Total Expenses</p>
+                <h2 id="totalExpense"> $0 </h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Transactions</p>
+                <h2 id="transactionCount"> 0 </h2>
+            </div>
+        </section>
+
+        <!-- CONTROLS -->
+
+        <section class="controls">
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search transactions...">
+            </div>
+
+            <select id="typeFilter">
+                <option value="all"> All Types </option>
+                <option value="income"> Income </option>
+                <option value="expense"> Expense </option>
+            </select>
+
+            <select id="categoryFilter">
+                <option value="all"> All Categories </option>
+                <option value="food"> Food </option>
+                <option value="transport"> Transport </option>
+                <option value="shopping"> Shopping </option>
+                <option value="bills"> Bills </option>
+                <option value="salary"> Salary </option>
+                <option value="freelance"> Freelance </option>
+                <option value="other"> Other </option>
+            </select>
+
+            <select id="sortFilter">
+                <option value="newest"> Newest </option>
+                <option value="oldest"> Oldest </option>
+                <option value="highest"> Highest Amount </option>
+                <option value="lowest"> Lowest Amount </option>
+                <option value="az"> A - Z </option>
+            </select>
+        </section>
+
+        <!-- TRANSACTIONS -->
+
+        <section class="transactions-section">
+            <div class="section-header">
+                <h2> Transactions </h2>
+                <button id="clearAllBtn" class="btn danger"> Clear All </button>
+            </div>
+
+            <div id="transactionList" class="transaction-list">
+            </div>
+        </section>
+    </div>
+
+
+    <!-- MODAL -->
+
+    <div id="transactionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"> Add Transaction </h2>
+                <button id="closeModalBtn" class="close-btn"> × </button>
+            </div>
+
+            <form id="transactionForm">
+                <input type="hidden" id="transactionId">
+                <!-- TITLE -->
+                <div class="form-group">
+                    <label> Title </label>
+                    <input type="text" id="title" placeholder="e.g. Grocery Shopping">
+                    <small id="titleError" class="error"></small>
+                </div>
+
+                <!-- AMOUNT -->
+                <div class="form-group">
+                    <label> Amount </label>
+                    <input type="number" id="amount" placeholder="Enter amount" min="1" step="0.01">
+                    <small id="amountError" class="error"></small>
+                </div>
+
+                <!-- TYPE -->
+                <div class="form-group">
+                    <label> Type </label>
+                    <select id="type">
+                        <option value="expense"> Expense </option>
+                        <option value="income"> Income </option>
+                    </select>
+                </div>
+
+                <!-- CATEGORY -->
+                <div class="form-group">
+                    <label> Category </label>
+                    <select id="category">
+                        <option value="food"> Food </option>
+                        <option value="transport"> Transport </option>
+                        <option value="shopping"> Shopping </option>
+                        <option value="bills"> Bills </option>
+                        <option value="salary"> Salary </option>
+                        <option value="freelance"> Freelance </option>
+                        <option value="other"> Other </option>
+                    </select>
+                </div>
+
+                <!-- DATE -->
+                <div class="form-group">
+                    <label> Date </label>
+                    <input type="date" id="date">
+                    <small id="dateError" class="error"></small>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="form-group">
+                    <label> Description </label>
+                    <textarea id="description" placeholder="Optional description..."></textarea>
+                </div>
+
+                <button type="submit" class="btn primary full">
+                    Save Transaction
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
