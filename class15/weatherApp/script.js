@@ -15,7 +15,7 @@ searchBtn.addEventListener("click", function () {
 
 
 function getWeather(cityName) {
-    let apiKey = "6d0910fe57f505e2331f3e1a2f0dc6ba";
+    let apiKey = "api_key";
     let locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
     fetch(locationUrl)
