@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input.error{
+            border: 1px solid red;
+            color: red;
+        }
+        .errortext{
+            color: red;
+        }
+        .errormsg{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="signup">
+        <!-- <input type="text" id="name" placeholder="enter name"> -->
+        <input type="text" id="email" placeholder="enter email">
+        <p id="emailerror" class="errormsg errortext">please enter email</p>
+        <input type="password" name="password" id="password" placeholder="enter password">
+        <p id="passerror" class="errormsg errortext">please enter email</p>
+        <button type="submit" id="submit">sign up</button>
+    </form>
+    <div id="userDetails">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

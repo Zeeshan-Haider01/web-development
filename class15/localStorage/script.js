@@ -1,11 +1,12 @@
 
 // 1. STORE DATA
-// let name = "subhan";
-// localStorage.setItem("username", name);
-// localStorage.setItem("id", 2);
+let name = "subhan";
+localStorage.setItem("username", name);
+localStorage.setItem("id", 2);
+localStorage.setItem("city", "khi");
 
 // 2. GET DATA
-// let savedName = localStorage.getItem("username");
+let savedName = localStorage.getItem("username");
 // console.log(savedName);
 
 // 3. REMOVE DATA
@@ -15,12 +16,12 @@
 // localStorage.clear();
 
 // 5. BUTTON EXAMPLE
-// let nameInput = document.getElementById("nameInput");
-// let result = document.getElementById("result");
+let nameInput = document.getElementById("nameInput");
+let result = document.getElementById("result");
 // let saveBtn = document.getElementById("saveBtn");
 // let getBtn = document.getElementById("getBtn");
 // let removeBtn = document.getElementById("removeBtn");
-// let clearBtn = document.getElementById("clearBtn");
+let clearBtn = document.getElementById("clearBtn");
 
 
 // SAVE
@@ -31,15 +32,22 @@
 //     result.innerText = "Name saved!";
 // });
 
+
+function saveItem(){
+    let name = nameInput.value;
+    localStorage.setItem("name", name)
+    // console.log(name , "name")
+}
 // // GET
-// getBtn.addEventListener("click", function () {
-//     let name = localStorage.getItem("username");
-//     if (name) {
-//         result.innerText = "Welcome " + name;
-//     } else {
-//         result.innerText = "No name found";
-//     }
-// });
+getBtn.addEventListener("click", function () {
+    let name = localStorage.getItem("name");
+    console.log(name , "name")
+    if (name) {
+        result.innerText = "Welcome " + name;
+    } else {
+        result.innerText = "No name found";
+    }
+});
 
 // // REMOVE
 // removeBtn.addEventListener("click", function () {
@@ -48,10 +56,19 @@
 // });
 
 // // CLEAR
-// clearBtn.addEventListener("click", function () {
+clearBtn.addEventListener("click", function () {
+    localStorage.clear();
+    // result.innerText = "All local storage cleared!";
+});
+
+
+// function clearAll(){
 //     localStorage.clear();
-//     result.innerText = "All local storage cleared!";
-// });
+// }
+
+function removeName(){
+    localStorage.removeItem("username");
+}
 
 // // 6. OBJECT IN LOCAL STORAGE
 let user = {
@@ -60,12 +77,14 @@ let user = {
     city: "Karachi"
 };
 // // Object → String
-localStorage.setItem("user", JSON.stringify(user));
+// localStorage.setItem("user", user);
+// localStorage.setItem("user", JSON.stringify(user));
+
 // localStorage.setItem("user", user);
 // // // String → Object
-let storedUser =  JSON.parse(localStorage.getItem("user"));
-console.log(storedUser);
-console.log(storedUser.name);
+// let storedUser =  JSON.parse(localStorage.getItem("user"));
+// console.log(storedUser);
+// console.log(storedUser.name);
 // console.log(storedUser.age);
 
 

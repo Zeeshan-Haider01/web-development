@@ -7,11 +7,15 @@
 </head>
 <body>
     <h1>Local Storage Demo</h1>
-    <input type="text" id="nameInput" placeholder="Enter your name">
-    <button id="saveBtn">Save Name</button>
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <button id="saveBtn" onclick="saveItem()">Save Name</button>
+    
     <button id="getBtn">Get Name</button>
-    <button id="removeBtn">Remove Name</button>
-    <button id="clearBtn">Clear All</button>
+
+    <button id="removeBtn" onclick="removeName()">Remove Name</button>
+
+    <button id="clearBtn" onclick="clearAll()">Clear All</button>
+
     <h2 id="result"></h2>
 
     <script src="script.js"></script>
