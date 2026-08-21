@@ -1,31 +1,31 @@
-let nums = [1, 2, 3];
-nums.forEach(function (num){
-    console.log(num)
-})
-// map
-nums.map(function (num){
-    console.log(num * 2)
-})
-const finalResult = numbers.filter(function(num) {
-  return num > 2;
-});
-// find
-const arr = [10, 20, 30];
-const resultfinal = arr.find(function(num) {
-  return num > 15;
-});
-// console.log(resultfinal); // 20
+// let nums = [1, 2, 3];
+// nums.forEach(function (num){
+//     console.log(num)
+// })
+// // map
+// nums.map(function (num){
+//     console.log(num * 2)
+// })
+// const finalResult = numbers.filter(function(num) {
+//   return num > 2;
+// });
+// // find
+// const arr = [10, 20, 30];
+// const resultfinal = arr.find(function(num) {
+//   return num > 15;
+// });
+// // console.log(resultfinal); // 20
 
-const array = [email, 20, 30];
-const resultfinals = arr.some(function(num) {
-  return num == email;
-});
-console.log(resultfinals);
-// every
-let allNums  = [2 , 4 , 6]
-const resultvalue = allNums.every(function(num) {
-  return num % 2 === 0;
-});
+// const array = [email, 20, 30];
+// const resultfinals = arr.some(function(num) {
+//   return num == email;
+// });
+// console.log(resultfinals);
+// // every
+// let allNums  = [2 , 4 , 6]
+// const resultvalue = allNums.every(function(num) {
+//   return num % 2 === 0;
+// });
 // let result = nums.map(function(num) {
 //     //   return 
 //      console.log(num * 2) 
@@ -65,11 +65,11 @@ const resultvalue = allNums.every(function(num) {
 // console.log(resultvalue); // true
 
 // // reduce
-const allnums = [10, 20, 30];
+// const allnums = [10, 20, 30];
 
-const reslt = allnums.reduce(function(total, num) {
-  return total + num;
-}, 0);
+// const reslt = allnums.reduce(function(total, num) {
+//   return total + num;
+// }, 0);
 // console.log(reslt); // 60
 
 // // total = 10
@@ -79,13 +79,13 @@ const reslt = allnums.reduce(function(total, num) {
 
 
 
-// const students = [
-//     { name: "Ali", age: 20, marks: 80 },
-//     { name: "Hamza", age: 21, marks: 75 },
-//     { name: "Zeeshan", age: 22, marks: 90 }
-// ];
+const students = [
+    { name: "Ali", age: 20, marks: 80 },
+    { name: "Hamza", age: 21, marks: 75 },
+    { name: "Zeeshan", age: 22, marks: 90 }
+];
 
-// let show  = document.getElementById("list")
+let show  = document.getElementById("list")
 
 // students.map(function(student){
 //     show.innerHTML = `
