@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+}
+header img{
+    width: 50px;
+}
+header ul {
+    display: flex;
+}
+header ul li {
+    list-style-type: none;
+}
+header ul li a{
+    text-decoration: none;
+}
+
+
+.product{
+    box-shadow: 0px 0px 5px 5px rgb(227, 223, 223);
+    padding: 10px;
+    text-align: center;
+
+}
+.product img{
+    width: 200px;
+}
+
+.products{
+    display: flex;
+}
+
+footer {
+    background-color: bisque;
+    padding: 10px;
+} 
+footer ul{
+    display: flex;
+} 
