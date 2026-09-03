@@ -1,8 +1,15 @@
-import ChildC from "./ChildC";
+import React, { memo } from 'react';
 
-function ChildB(){
-    return(
-        <ChildC  />
-    )
+function ChildB({ Learning, count }) {
+  console.log("Child Component Rendered");
+
+  return (
+    <div>
+      {/* Child component content */}
+    </div>
+  );
 }
-export default ChildB;
+
+// Wrap with React.memo to prevent unnecessary re-renders
+// export default memo(ChildB);
+export default memo(ChildB);
