@@ -48,10 +48,44 @@
 // export default App;
 
 import ChildC from "./ChildC";
+import { useEffect, useState } from "react";
 
 function App(){
+  
+  let [count , setCount] = useState(0);
+  let [countSub , setCountSub] = useState(100);
+  let [posts , setPosts] = useState([])
+
+
+// useEffect(function(){
+//   // console.log("hello")
+//   async function getPost(){
+//         let response =  await fetch('https://jsonplaceholder.typicode.com/posts')
+//         let data  = await  response.json()
+//         setPosts(data)
+//   }
+//   getPost()
+// },[count])
+
+// useEffect(() => {
+//   // Side effect code
+
+//   return () => {
+//     // Cleanup (optional)
+//   };
+// }, [dependencies]);
+
   return(
     <>
+    {/* {posts.map(function(post){
+      return(
+        <p>{post.title}</p>
+      )
+    })}
+    <h2>{count}</h2>
+    <h2>{countSub}</h2>
+    <button onClick={() => setCount(count + 1)}>Add</button>
+    <button onClick={() => setCountSub(countSub - 1)}>Sub</button> */}
       <ChildC />
     </>
   )
