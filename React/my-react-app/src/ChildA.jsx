@@ -9,18 +9,25 @@ import ChildB from "./ChildB";
 function ChildA(){
     let [add , setAdd] = useState(0);
     let [sub , setSub] = useState(100);
-    let mul = useMemo(function(){
-        console.log("multiple")
+    function addition(){
+        console.log("added")
+        setAdd(add + 1)
+    }
+    function substraction(){
+        console.log("subtracted")
+        setSub(sub - 1)
+    }
+    let mul = useMemo(() => {
+        console.log("multiply")
         return add * 10;
-    },[add])
+    }, [add])
     return(
         <>
             <p>{add}</p>
             <p>{sub}</p>
-            {mul}
-            {/* <button onClick={add}>Add</button> */}
-            <button onClick={()=> setAdd(add + 1)}>Add</button>
-            <button onClick={()=> setSub(sub - 1)}>Sub</button>
+            <p>{mul}</p>
+            <button onClick={addition}>Add</button>
+            <button onClick={substraction}>Sub</button>
         </>
     )
 }

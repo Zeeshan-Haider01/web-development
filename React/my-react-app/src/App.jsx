@@ -49,6 +49,10 @@
 
 import ChildC from "./ChildC";
 import { useEffect, useState } from "react";
+import ContactList from "./contact";
+import ExpenseTracker from "./ExpenseTracker";
+import Effect from "./Effect";
+import ChildA from "./ChildA";
 
 function App(){
   
@@ -86,7 +90,11 @@ function App(){
     <h2>{countSub}</h2>
     <button onClick={() => setCount(count + 1)}>Add</button>
     <button onClick={() => setCountSub(countSub - 1)}>Sub</button> */}
-      <ChildC />
+      {/* <ChildC /> */}
+      {/* <ContactList /> */}
+      {/* <ExpenseTracker /> */}
+      {/* <Effect /> */}
+      <ChildA />
     </>
   )
 }

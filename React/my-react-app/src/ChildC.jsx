@@ -1,27 +1,3 @@
-// import { useState } from "react";
-// function ChildC(){      
-//     let [name , setName] = useState("")
-//     let [getName , setGetName] = useState([])
-//     function getIName(event){
-//         setName(event.target.value)
-//     }
-//     function showName(){
-//         setGetName([...getName, name])
-//     }
-//     return(
-//         <>
-//             <input type="text" onChange={getIName} />
-//             <button onClick={showName}>show Name</button>            
-//             {getName.map(function(name){
-//                 return(
-//                     <p>{name}</p>
-//                 )
-//             })}
-//         </>
-//     )
-// }
-// export default ChildC;
-
 import { useState } from "react";
 function ChildC(){
     let [name , setName] = useState("");
@@ -30,8 +6,26 @@ function ChildC(){
         setName(event.target.value)
     }
     function addData(){
+        // setShowName((prevNames) => {
+        //     return [...prevNames, name];
+        // })
         setShowName([...showName , name])
         setName("")
+    }
+    function handleDelete(index){
+        // let newName = showName.filter((_, i) => i !== index);
+        // setShowName(newName)
+        let newName = [...showName]
+        newName.splice(index,1)
+        setShowName(newName)
+    }
+    function handleEdit(index) {
+        let newName = [...showName]
+        let updatedName = prompt("Enter new name", newName[index])
+        if (updatedName !== null) {
+            newName[index] = updatedName
+            setShowName(newName)
+        }
     }
     return(
         <>
@@ -39,7 +33,11 @@ function ChildC(){
             <button onClick={addData}>Add Name</button>
             {showName.map(function(name,index){
                 return(
-                    <p key={index}> {name} </p>
+                    <div key={index} style={{display:"flex"}}>
+                        <p > {name} </p>
+                        <button onClick={() => handleDelete(index)}>Delete</button>
+                        <button onClick={() => handleEdit(index)}>Edit</button>
+                    </div>
                 )
             })}
         </>
