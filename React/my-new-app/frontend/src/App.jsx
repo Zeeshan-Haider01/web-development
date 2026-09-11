@@ -1,20 +1,33 @@
+// import SingleUser from "./pages/SingleProduct";
+// import UserForm from "./pages/UserForm";
+// import GetPost from "./pages/GetPost";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import SingleUser from "./pages/SingleUser";
-import UserForm from "./pages/UserForm";
 import "./App.css";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/user/:id" element={<SingleUser />} />
-                <Route path="/create" element={<UserForm />} />
-                <Route path="/edit/:id" element={<UserForm />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/singleproduct/:id" element={<SingleProduct />} />
             </Routes>
         </BrowserRouter>
     );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+//  <Route path="/create" element={<UserForm />} />
+//                 <Route path="/edit/:id" element={<UserForm />} />

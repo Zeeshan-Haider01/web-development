@@ -15,20 +15,22 @@ function Home() {
 
     // Get All User
     const [users, setUsers] = useState([]);
-    const URL = "http://localhost:5000/api/users";
+    const URL = "https://dummyjson.com/products";
+     
+    const loadUsers = async () => {
+        const response = await fetch(URL);
+        const data = await response.json();
+        setUsers(data.products);
+    };
     useEffect(() => {
-        const loadUsers = async () => {
-            const response = await fetch(URL);
-            const data = await response.json();
-            setUsers(data);
-        };
         loadUsers();
     }, []);
 
     // DELETE USER
     const removeUser = async (id) => {
-        await deleteUser(id);
-        setUsers(await getUsers());
+         await fetch(`${URL}/${id}`, { method: "DELETE" });
+        // await deleteUser(id);
+        setUsers(await loadUsers());
     };
 
     return (
@@ -41,21 +43,20 @@ function Home() {
 
             <div className="users">
                 {users?.map((user) => (
-                    <div className="user" key={user?._id}>
-                        <img src={user.image} alt={user?.name} />
-                        <h2> {user?.name} </h2>
-                        <p> Email: {user?.email} </p>
-                        <p> Age: {user?.age} </p>
+                    <div className="user" key={user?.id}>
+                        <img src={user.thumbnail} alt={user?.title} />
+                        <h2> {user?.title} </h2>
+                        <p> description: {user?.description} </p>
 
-                        <Link to={`/user/${user?._id}`}>
+                        <Link to={`/singleproduct/${user?.id}`}>
                             <button> View </button>
                         </Link>
 
-                        <Link to={`/edit/${user?._id}`}>
+                        <Link to={`/edit/${user?.id}`}>
                             <button> Edit </button>
                         </Link>
 
-                        <button onClick={() => removeUser(user?._id)}> Delete </button>
+                        <button onClick={() => removeUser(user?.id)}> Delete </button>
                     </div>
                 ))}
             </div>
